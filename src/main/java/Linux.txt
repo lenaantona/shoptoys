@@ -1,0 +1,71 @@
+elena@elena-VirtualBox:~$ mkdir "Игрушки для школьников"
+elena@elena-VirtualBox:~$ mkdir "Игруши для дошолят"
+elena@elena-VirtualBox:~$ ls
+ elena.txt           shared         zad2.sh                   Изображения
+ file2               snap           Видео                     Музыка
+ file3               test.txt.bak   Документы                 Общедоступные
+ file4               text.txt       Загрузки                 'Рабочий стол'
+ iptables_config     useradd.txt   'Игруши для дошолят'       Шаблоны
+ nginx_signing.key   zad1.sh       'Игрушки для школьников'
+elena@elena-VirtualBox:~$ cd ^C
+elena@elena-VirtualBox:~$ cd'Игрушки для школьников'
+cdИгрушки для школьников: команда не найдена
+elena@elena-VirtualBox:~$ cd 'Игрушки для школьников'
+elena@elena-VirtualBox:~/Игрушки для школьников$ nano Роботы
+elena@elena-VirtualBox:~/Игрушки для школьников$ nano Конструтор
+elena@elena-VirtualBox:~/Игрушки для школьников$ nano "Настольные игры"
+elena@elena-VirtualBox:~/Игрушки для школьников$ ls
+ Конструтор  'Настольные игры'   Роботы
+elena@elena-VirtualBox:~/Игрушки для школьников$ cd ../'Игруши для дошолят'
+elena@elena-VirtualBox:~/Игруши для дошолят$ nano "Мягки игрушки"
+elena@elena-VirtualBox:~/Игруши для дошолят$ nano Куклы
+elena@elena-VirtualBox:~/Игруши для дошолят$ nano Машинки
+elena@elena-VirtualBox:~/Игруши для дошолят$ ls
+ Куклы   Машинки  'Мягки игрушки'
+elena@elena-VirtualBox:~/Игруши для дошолят$ cd ..
+elena@elena-VirtualBox:~$ cp -R 'Игрушки для школьников' 'Имя Игрушки'
+elena@elena-VirtualBox:~$ cp -r ~/"Игруши для дошолят"/. ~/"Имя Игрушки"
+elena@elena-VirtualBox:~$ mv "Имя Игрушки" "Игрушки"
+@elena-VirtualBox:~$ ls Игрушки
+ Конструтор   Куклы   Машинки  'Мягкие игрушки'  'Настольные игры'   Роботы
+elena@elena-VirtualBox:~$ sudo snap install vlc
+vlc 3.0.18 от VideoLAN✓ установлен
+elena@elena-VirtualBox:~$ vlc --version
+VLC media player 3.0.18 Vetinari (revision 3.0.18-0-ge9eceaed4d)
+Версия VLC 3.0.18 Vetinari (3.0.18-0-ge9eceaed4d)
+Скомпилировано videolan@runner-st17ydin-project-435-concurrent-1 (Oct 19 2022 02:13:05)
+Компилятор: gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1)
+Эта программа поставляется БЕЗ ГАРАНТИИ в степени, разрешённой законодательством.
+Вы можете передавать её на условиях Стандартной общественной лицензии GNU;
+За подробностями обратитесь к файлу COPYING.
+Программа разработана командой VideoLAN (см. файл AUTHORS).
+elena@elena-VirtualBox:~$ nano cat_3_minutes.txt
+elena@elena-VirtualBox:~$ crontab -e
+crontab: installing new crontab
+
+# Edit this file to introduce tasks to be run by cron.
+# 
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+# 
+# To define the time you can provide concrete values for
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').
+# 
+# Notice that tasks will be started based on the cron's system
+# daemon's notion of time and timezones.
+# 
+# Output of the crontab jobs (including errors) is sent through
+# email to the user the crontab file belongs to (unless redirected).
+# 
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+# 
+# For more information see the manual pages of crontab(5) and cron(8)
+# 
+# m h  dom mon dow   command
+
+*/10 * * * * cat /home/elena/text.txt > /home/elena/test.txt.bak
+*/3 * * * * echo 'Еще три минуты прошло' >> /home/elena/cat_3_minutes.txt
